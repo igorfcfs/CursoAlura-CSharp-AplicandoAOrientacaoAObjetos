@@ -13,10 +13,10 @@ namespace ScreenSound
         cw + tab -> Console.WriteLine();
         prop + TAB -> public int MyProperty { get; set; }
          */
-        public string Nome { get; set; }
-        public string Artista { get; set; }
-        public int Duracao { get; set; }
-        public bool Disponivel { get; set; }
+        public string Nome { get; }
+        public Banda Artista { get; }
+        public int Duracao { get; set;  }
+        public bool Disponivel { get; set;  }
 
         //Propriedade somente leitura sem lambda
         /* public string DescricaoResumida {
@@ -28,6 +28,12 @@ namespace ScreenSound
 
         //Propriedade somente leitura com lambda
         public string DescricaoResumida => $"A música {Nome} pertence à banda {Artista}";
+
+        public Musica(Banda artista, string nome)
+        {
+            Artista = artista;
+            Nome = nome;
+        }
 
         public void ExibirFichaTecnica()
         {
