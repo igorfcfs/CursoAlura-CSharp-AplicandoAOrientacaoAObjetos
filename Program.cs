@@ -27,6 +27,24 @@ namespace ScreenSound
 
             musica2.ExibirFichaTecnica();
             Console.WriteLine(musica2.DescricaoResumida);
+
+            Console.WriteLine();
+
+            Album albumDoQueen = new Album();
+            albumDoQueen.Nome = "A night at the opera";
+
+            Musica musica3 = new Musica();
+            musica3.Nome = "Love of my life";
+            musica3.Duracao = 213;
+
+            Musica musica4 = new Musica();
+            musica4.Nome = "Bohemian Rhapsody";
+            musica4.Duracao = 354;
+
+            albumDoQueen.AdicionarMusica(musica3);
+            albumDoQueen.AdicionarMusica(musica4);
+
+            albumDoQueen.ExibirMusicasDoAlbum();
         }
     }
 }
